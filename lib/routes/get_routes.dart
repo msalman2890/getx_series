@@ -9,7 +9,7 @@ class GetAppRoute{
     return [
       GetPage(
         name: AppRoute.initial,
-        page: () => const MyHomePage(title: 'Getx Routing'),
+        page: () => MyHomePage(title: 'Getx Routing'),
       ),
       GetPage(
         name: AppRoute.secondPage,
