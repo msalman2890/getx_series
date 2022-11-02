@@ -11,4 +11,22 @@ class CounterController extends GetxController{
     // counter(counter.value + 1);
   }
 
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    print("onINit");
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+    print("onReady");
+  }
+
+  @override
+  void onClose() {
+    super.onClose();
+    print("onClose");
+  }
 }
