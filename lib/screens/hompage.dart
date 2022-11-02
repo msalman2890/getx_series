@@ -35,8 +35,7 @@ class MyHomePage extends StatelessWidget {
               const SizedBox(height: 30,),
               ElevatedButton(
                 onPressed: () {
-                  // Get.toNamed("/secondPage");
-                  Get.delete<CounterController>();
+                  Get.toNamed("/secondPage");
                 },
                 child: const Text("Go to Second Page"),
               )
