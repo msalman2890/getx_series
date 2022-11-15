@@ -38,6 +38,26 @@ class MyHomePage extends StatelessWidget {
                   Get.toNamed("/secondPage");
                 },
                 child: const Text("Go to Second Page"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Get.defaultDialog(
+                    title: "Confirm Dialog",
+                    middleText: "Are you sure you want to delete this item?",
+                    textConfirm: "Yes",
+                    textCancel: "No",
+                    confirmTextColor: Colors.white,
+                    cancelTextColor: Colors.red,
+                    onConfirm: () {
+                      Get.back();
+                    },
+                    onCancel: () {
+                      Get.back();
+                    },
+                    middleTextStyle: const TextStyle(fontSize: 20),
+                  );
+                },
+                child: const Text("Show Dialog"),
               )
             ],
           ),

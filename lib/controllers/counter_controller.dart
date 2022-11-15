@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 class CounterController extends GetxController{
   RxInt counter = 0.obs;
-  late Timer _timer;
 
   void increment(){
     counter.value++;
@@ -25,15 +24,11 @@ class CounterController extends GetxController{
   void onReady() {
     super.onReady();
     print("onReady");
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      increment();
-    });
   }
 
   @override
   void onClose() {
     super.onClose();
     print("onClose");
-    _timer.cancel();
   }
 }
